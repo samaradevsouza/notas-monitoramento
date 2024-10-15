@@ -163,14 +163,15 @@ textarea:focus {
 
 
 @media (max-width: 1000px) {
+    body {
+        font-size: 3.5vh;
+    }
     h1 {
         font-size: 7vh;
-    }
-    .content {
-        font-size: 5vh;
     }
     .botoes {
         margin-top: 20px;
     }
-    }
+}
+    
     
