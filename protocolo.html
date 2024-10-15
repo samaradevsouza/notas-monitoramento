@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="favicon.png" />
+    <title>Notas - Protocolo</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <center><h1>Notas padrões de protocolo! :)</h1></center>
+    </header>
+    <div id="wrap-around">
+      <div id="form-right">
+        <form action="" onsubmit="createNote(); return false;">
+          <center>
+            <table>
+              <tr>
+                <td>
+                  <label for="tipoProcesso"
+                    >Selecione o tipo de processo:</label
+                  >
+                </td>
+                <td>
+                  <select
+                    name="tipoProcesso"
+                    id="tipoProcesso"
+                    onchange="mudarForms(this)"
+                  >
+                    <option value="selecione">Selecione</option>
+                    <option value="filhos">Filhos</option>
+                    <option value="netos">Netos</option>
+                    <option value="matrimonio">Matrimônio</option>
+                    <option value="transcricao">Transcrição</option>
+                  </select>
+                </td>
+              </tr>
+              <tr>
+                <td><label for="nomeCliente">Nome do cliente:</label></td>
+                <td>
+                  <input
+                    required
+                    type="text"
+                    name="nomeCliente"
+                    id="nomeCliente"
+                    autocomplete="off"
+                    placeholder="Somente primeiro nome"
+                  />
+                </td>
+              </tr>
+              <tr>
+                <td><label for="nomeReq">Nome do requerente:</label></td>
+                <td>
+                  <input
+                    required
+                    type="text"
+                    name="nomeReq"
+                    id="nomeReq"
+                    autocomplete="off"
+                  />
+                </td>
+              </tr>
+              <tr>
+                <td><label for="etapa" id="labelEtapa">Data do protocolo:</label></td>
+                <td>
+                  <input
+                    required
+                    placeholder="XX/XX/XXXX"
+                    type="text"
+                    name="dataP"
+                    id="dataP"
+                    autocomplete="off"
+                  />
+                </td>
+              </tr>
+            </table>
+          </center>
+          <center>
+            <div class="botoes">
+              <button type="submit" id="criarNota">Criar nota</button>
+            </div>
+          </center>
+        </form>
+      </div>
+
+      <div id="result-left" class="content-container">
+        <textarea
+          name="content"
+          id="content"
+          class="content"
+          placeholder="A nota aparecerá aqui"
+        ></textarea>
+        <center>
+          <button onclick="copyToClipboard()" id="copy-button">Copiar</button>
+        </center>
+      </div>
+    </div>
+    <center><button type="button" onclick="reset()">Limpar</button></center>
+    <footer>
+        <center><a href="index.html">Notas de monitoramento</a></center>
+      </footer>
+    <script src="script-protocolo.js"></script>
+  </body>
+</html>

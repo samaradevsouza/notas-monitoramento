@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="favicon.png" />
+    <title>Notas - Monitoramento</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <center><h1>Notas padrões de monitoramento! :)</h1></center>
+    </header>
+    <div id="wrap-around">
+      <div id="form-right">
+        <form action="" onsubmit="createNote(); return false;">
+          <center>
+            <table>
+              <tr>
+                <td>
+                  <label for="tipoProcesso"
+                    >Selecione o tipo de processo:</label
+                  >
+                </td>
+                <td>
+                  <select
+                    name="tipoProcesso"
+                    id="tipoProcesso"
+                    onchange="mudarForms(this)"
+                  >
+                    <option value="selecione">Selecione</option>
+                    <option value="filhos">Filhos</option>
+                    <option value="netos">Netos</option>
+                    <option value="matrimonio">Matrimônio</option>
+                    <option value="transcricao">Transcrição</option>
+                  </select>
+                </td>
+              </tr>
+              <tr>
+                <td><label for="nomeCliente">Nome do cliente:</label></td>
+                <td>
+                  <input
+                    required
+                    type="text"
+                    name="nomeCliente"
+                    id="nomeCliente"
+                    autocomplete="off"
+                    placeholder="Somente primeiro nome"
+                  />
+                </td>
+              </tr>
+              <tr>
+                <td><label for="nomeReq">Nome do requerente:</label></td>
+                <td>
+                  <input
+                    required
+                    type="text"
+                    name="nomeReq"
+                    id="nomeReq"
+                    autocomplete="off"
+                  />
+                </td>
+              </tr>
+              <tr>
+                <td><label id="labelNumProcesso" for="numProcesso">Número do processo:</label></td>
+                <td>
+                  <input
+                    type="text"
+                    name="numProcesso"
+                    id="numProcesso"
+                    autocomplete="off"
+              </tr>
+              <tr>
+                <td><label for="etapa" id="labelEtapa">Etapa:</label></td>
+                <td>
+                  <select
+                    name="etapa"
+                    id="etapa"
+                  >
+                    <option value="selecione">Selecione</option>
+                    <option value="submetido">Submetido</option>
+                    <option value="analise">Em análise</option>
+                    <option value="decisao">Para decisão</option>
+                    <option value="emConclusao">Em fase de conclusão</option>
+                    <option value="concluido">Concluído</option>
+                  </select>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <label for="chaveDeAcesso" id="labelChave"
+                    >Senha de acesso:</label
+                  >
+                </td>
+                <td>
+                  <input
+                    type="text"
+                    name="chaveDeAcesso"
+                    id="chaveDeAcesso"
+                    autocomplete="off"
+                  />
+                </td>
+              </tr>
+            </table>
+          </center>
+          <center>
+            <div class="botoes">
+              <button type="submit" id="criarNota">Criar nota</button>
+            </div>
+          </center>
+        </form>
+      </div>
+
+      <div id="result-left" class="content-container">
+        <textarea
+          name="content"
+          id="content"
+          class="content"
+          placeholder="
+          A nota aparecerá aqui"
+        ></textarea>
+        <center>
+          <button onclick="copyToClipboard()" id="copy-button">Copiar</button>
+        </center>
+      </div>
+    </div>
+    <center><button type="button" onclick="reset()" id="reset">Limpar</button></center>
+    <footer>
+      <center><a href="protocolo.html">Notas de protocolo</a></center>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
