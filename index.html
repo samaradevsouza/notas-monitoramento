@@ -68,21 +68,21 @@
                 </td>
               </tr>
               <tr>
-                <td><label id="labelNumProcesso" for="numProcesso">Número do processo:</label></td>
                 <td>
-                  <input
-                    type="text"
-                    name="numProcesso"
-                    id="numProcesso"
-                    autocomplete="off"
+                  <label id="labelNumProcesso" for="numProcesso"
+                    >Número do processo:</label
+                  >
+                </td>
+                <td>
+                  <input type="text" name="numProcesso" id="numProcesso"
+                  autocomplete="off"
+                </td>
               </tr>
+
               <tr>
                 <td><label for="etapa" id="labelEtapa">Etapa:</label></td>
                 <td>
-                  <select
-                    name="etapa"
-                    id="etapa"
-                  >
+                  <select name="etapa" id="etapa">
                     <option value="selecione">Selecione</option>
                     <option value="submetido">Submetido</option>
                     <option value="analise">Em análise</option>
@@ -122,15 +122,16 @@
           name="content"
           id="content"
           class="content"
-          placeholder="
-A nota aparecerá aqui"
+          placeholder="A nota aparecerá aqui"
         ></textarea>
         <center>
           <button onclick="copyToClipboard()" id="copy-button">Copiar</button>
         </center>
       </div>
     </div>
-    <center><button type="button" onclick="reset()" id="reset">Limpar</button></center>
+    <center>
+      <button type="button" onclick="reset()" id="reset">Limpar</button>
+    </center>
     <footer>
       <center><a href="protocolo.html">Notas de protocolo</a></center>
     </footer>
