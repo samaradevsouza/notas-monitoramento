@@ -145,7 +145,6 @@ textarea {
     resize: none;
     width: 85%;
     color: #353839;
-    font-size: 3vw;
 }
 
 textarea:focus {
@@ -190,6 +189,10 @@ textarea:focus {
     #content {
         font-size: 3.5vh;
         margin-top: 5px;
+    }
+    
+    textarea {
+        font-size: 3vw;
     }
 
     .botoes {
