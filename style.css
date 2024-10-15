@@ -113,9 +113,15 @@ table select {
 
 .content {
     flex: 1;
-    overflow: hidden;
     align-self: center;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
 }
+
+.content::-webkit-scrollbar {
+    display: none;
+  }
+
 
 #copy-button {
     margin-bottom: 10px;
