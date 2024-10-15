@@ -162,7 +162,7 @@ textarea:focus {
  }
 
 
-@media (max-width: 1000px) {
+@media (max-width: 1200px) {
     body {
         font-size: 3.5vh;
     }
