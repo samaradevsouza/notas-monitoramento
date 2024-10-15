@@ -167,7 +167,14 @@ textarea:focus {
         font-size: 3.5vh;
     }
     h1 {
+        margin-top: 10px;
         font-size: 7vh;
+    }
+    table select {
+        width: 15vw;
+    }
+    #content {
+        font-size: 3.5vh;
     }
     .botoes {
         margin-top: 20px;
