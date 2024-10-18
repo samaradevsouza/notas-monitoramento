@@ -182,6 +182,11 @@ textarea:focus {
         font-size: 7vh;
     }
 
+    table input {
+        width: 18vw;
+    }
+
+
     table select {
         width: 18vw;
     }
