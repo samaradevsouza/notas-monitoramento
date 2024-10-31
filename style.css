@@ -79,6 +79,10 @@ table select {
     width: 10.5vw;
 }
 
+table input {
+    width: 10.5vw;
+}
+
 #form-right {
     padding-top: 20px;
     line-height: 5.5vh;
