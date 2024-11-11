@@ -215,8 +215,7 @@ textarea:focus {
 
 @media (max-width: 960px) {
     #wrap-around {
-        display: flex;
-        flex-direction: column;
+        display: none;
     }
 
 }
