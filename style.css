@@ -215,7 +215,12 @@ textarea:focus {
 
 @media (max-width: 960px) {
     #wrap-around {
-        display: none;
+        display: flex;
+        flex-direction: column;
     }
 
+    #form-right, 
+    #result-left {
+        width: 100%;
+    }
 }
