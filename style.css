@@ -214,13 +214,22 @@ textarea:focus {
 }
 
 @media (max-width: 960px) {
+    body {
+        font-size: 2vh;
+    }
+
     #wrap-around {
         display: flex;
         flex-direction: column;
     }
 
-    #form-right, 
+    #form-right {
+        width: 100%;
+        height: 40%;
+    }
+
     #result-left {
         width: 100%;
+        height: 40%;
     }
 }
