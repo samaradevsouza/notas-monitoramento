@@ -69,11 +69,11 @@ button {
     border: 1px solid #353839;
 }
 
-#wrap-around {
+/* #wrap-around {
     display: flex;
     justify-content: center;
     margin-top: 50px;
-}
+} */
 
 table select {
     width: 10.5vw;
@@ -215,7 +215,11 @@ textarea:focus {
 
 @media (max-width: 960px) {
     body {
-        font-size: 2vh;
+        font-size: 3vh;
+    }
+
+    label {
+        font-size: 3vh;
     }
 
     #wrap-around {
