@@ -81,7 +81,7 @@ table input {
     padding-top: 20px;
     line-height: 5.5vh;
     width: 33.3%;
-    margin-right: 50px;
+
     background: rgba(255, 255, 255, 0.2);
     border: 0.2vw white solid;
     border-radius: 40px;
@@ -171,15 +171,21 @@ textarea:focus {
 
 @media (max-width: 2000px) {
     #wrap-around {
+        border: red 1px solid;
         display: flex;
         justify-content: center;
         margin-top: 50px;
+    }
+    #form-right {
+        margin-right: 50px;
+    }
+    #result-left {
+        margin-left: 50px;
     }
 }
 
 @media (max-width: 1200px) {
     #wrap-around {
-        border: red 1px solid;
         display: flex;
         justify-content: center;
         margin-top: 50px;
