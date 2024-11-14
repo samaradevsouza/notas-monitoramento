@@ -69,12 +69,6 @@ button {
     border: 1px solid #353839;
 }
 
-/* #wrap-around {
-    display: flex;
-    justify-content: center;
-    margin-top: 50px;
-} */
-
 table select {
     width: 10.5vw;
 }
@@ -91,7 +85,6 @@ table input {
     background: rgba(255, 255, 255, 0.2);
     border: 0.2vw white solid;
     border-radius: 40px;
-    height: 35%;
 }
 
 #result-left {
@@ -100,7 +93,6 @@ table input {
     background: rgba(255, 255, 255, 0.2);
     border: 0.2vw white solid;
     border-radius: 40px;
-    height: 35%;
 }
 
 
@@ -126,7 +118,7 @@ table input {
 
 .content::-webkit-scrollbar {
     display: none;
-  }
+}
 
 
 #copy-button {
@@ -177,8 +169,21 @@ textarea:focus {
     text-align: center;
 }
 
+@media (max-width: 1800px) {
+    #wrap-around {
+        display: flex;
+        justify-content: center;
+        margin-top: 50px;
+    }
+}
 
 @media (max-width: 1200px) {
+    #wrap-around {
+        display: flex;
+        justify-content: center;
+        margin-top: 50px;
+    }
+
     body {
         font-size: 3.5vh;
     }
@@ -201,7 +206,7 @@ textarea:focus {
         font-size: 3.5vh;
         margin-top: 5px;
     }
-    
+
     textarea {
         font-size: 3vw;
     }
