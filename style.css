@@ -256,3 +256,11 @@ textarea:focus {
         height: 15em;
     }
 }
+
+@media (max-height: 800px) {
+    #wrap-around {
+        display: flex;
+        justify-content: center;
+        margin-top: 50px;
+    }
+}
