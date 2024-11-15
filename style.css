@@ -81,7 +81,6 @@ table input {
     padding-top: 20px;
     line-height: 5.5vh;
     width: 33.3%;
-
     background: rgba(255, 255, 255, 0.2);
     border: 0.2vw white solid;
     border-radius: 40px;
@@ -175,12 +174,15 @@ textarea:focus {
         justify-content: center;
         margin-top: 50px;
     }
+
     #form-right {
         margin-right: 50px;
     }
+
     #result-left {
         margin-left: 50px;
     }
+
     textarea {
         height: 25em;
     }
@@ -245,13 +247,12 @@ textarea:focus {
 
     #form-right {
         width: 100%;
-        height: 40%;
     }
 
     #result-left {
         width: 100%;
-        height: 40%;
     }
+
     textarea {
         height: 15em;
     }
@@ -262,5 +263,17 @@ textarea:focus {
         display: flex;
         justify-content: center;
         margin-top: 50px;
+    }
+
+    #form-right {
+        width: 33.3%;
+    }
+
+    #result-left {
+        width: 33.3%;
+    }
+
+    textarea {
+        height: 15em;
     }
 }
