@@ -1,3 +1,4 @@
+```css
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
     -webkit-appearance: none;
@@ -14,7 +15,6 @@ input[type=number] {
     font-style: normal;
 }
 
-
 body {
     background: linear-gradient(-45deg, #23024d, #beaeb1, #d7856e, #8e5b70);
     background-size: 400% 400%;
@@ -22,7 +22,7 @@ body {
     height: 100vh;
     color: #353839;
     font-family: "Roboto", sans-serif;
-    overflow: overlay;
+    overflow: hidden;
 }
 
 footer {
@@ -32,25 +32,22 @@ footer {
 a {
     text-decoration: none;
     color: #353839;
-    border: #353839 1px solid;
+    border: 1px solid #353839;
     padding: 3px;
-    font-size: 0.7w;
+    font-size: 0.7vw;
 }
 
 @keyframes gradient {
     0% {
         background-position: 0% 50%;
     }
-
     50% {
         background-position: 100% 50%;
     }
-
     100% {
         background-position: 0% 50%;
     }
 }
-
 
 h1 {
     margin-top: 60px;
@@ -69,31 +66,24 @@ button {
     border: 1px solid #353839;
 }
 
-table select {
-    width: 10.5vw;
-}
-
+table select,
 table input {
     width: 10.5vw;
 }
 
-#form-right {
+#form-right,
+#result-left {
     padding-top: 20px;
     line-height: 5.5vh;
     width: 33.3%;
     background: rgba(255, 255, 255, 0.2);
-    border: 0.2vw white solid;
+    border: 0.2vw solid white;
     border-radius: 40px;
 }
 
 #result-left {
-    width: 33.3%;
     margin-left: 50px;
-    background: rgba(255, 255, 255, 0.2);
-    border: 0.2vw white solid;
-    border-radius: 40px;
 }
-
 
 #criarNota {
     margin-left: 20px;
@@ -119,7 +109,6 @@ table input {
     display: none;
 }
 
-
 #copy-button {
     margin-bottom: 10px;
 }
@@ -134,38 +123,16 @@ table input {
     margin-top: 10px;
 }
 
-.content:focus {
-    border: none;
-}
-
 textarea {
     resize: none;
     width: 85%;
     color: #353839;
-}
-
-textarea:focus {
+    background: transparent;
     border: none;
 }
 
-.content::placeholder {
-    text-align: center;
-}
-
-.content::-webkit-input-placeholder {
-    text-align: center;
-}
-
-.content:-moz-placeholder {
-    text-align: center;
-}
-
-.content::-moz-placeholder {
-    text-align: center;
-}
-
-.content:-ms-input-placeholder {
-    text-align: center;
+textarea:focus {
+    outline: none;
 }
 
 @media (max-width: 2000px) {
@@ -175,26 +142,12 @@ textarea:focus {
         margin-top: 50px;
     }
 
-    #form-right {
-        margin-right: 50px;
-    }
-
-    #result-left {
-        margin-left: 50px;
-    }
-
     textarea {
         height: 25em;
     }
 }
 
 @media (max-width: 1200px) {
-    #wrap-around {
-        display: flex;
-        justify-content: center;
-        margin-top: 50px;
-    }
-
     body {
         font-size: 3.5vh;
     }
@@ -204,18 +157,9 @@ textarea:focus {
         font-size: 7vh;
     }
 
-    table input {
-        width: 18vw;
-    }
-
-
+    table input,
     table select {
         width: 18vw;
-    }
-
-    #content {
-        font-size: 3.5vh;
-        margin-top: 5px;
     }
 
     textarea {
@@ -224,10 +168,6 @@ textarea:focus {
 
     .botoes {
         margin-top: 20px;
-    }
-
-    #copy-button {
-        margin-bottom: 0px;
     }
 }
 
@@ -245,10 +185,7 @@ textarea:focus {
         flex-direction: column;
     }
 
-    #form-right {
-        width: 100%;
-    }
-
+    #form-right,
     #result-left {
         width: 100%;
     }
@@ -265,10 +202,7 @@ textarea:focus {
         margin-top: 50px;
     }
 
-    #form-right {
-        width: 33.3%;
-    }
-
+    #form-right,
     #result-left {
         width: 33.3%;
     }
