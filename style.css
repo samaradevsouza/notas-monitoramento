@@ -171,7 +171,7 @@ textarea:focus {
     }
 }
 
-@media (max-width: 960px) {
+/* @media (max-width: 960px) {
     body {
         font-size: 3vh;
     }
@@ -193,9 +193,12 @@ textarea:focus {
     textarea {
         height: 15em;
     }
-}
+} */
 
-@media (max-height: 800px) {
+@media (max-height: 500px) {
+    body {
+        font-size: 1em;
+    }
     #wrap-around {
         display: flex;
         justify-content: center;
@@ -209,5 +212,7 @@ textarea:focus {
 
     textarea {
         height: 15em;
+        font-size: 1em;
+        text-align: center;
     }
 }
