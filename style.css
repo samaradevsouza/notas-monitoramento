@@ -197,6 +197,7 @@ textarea:focus {
 
 @media (max-height: 500px) {
     body {
+        overflow: scroll;
         font-size: 1em;
     }
     #wrap-around {
