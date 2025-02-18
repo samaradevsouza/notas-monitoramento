@@ -1,5 +1,4 @@
-```css
-input::-webkit-outer-spin-button,
+css input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
     -webkit-appearance: none;
     margin: 0;
@@ -16,12 +15,36 @@ input[type=number] {
 }
 
 body {
-    background: linear-gradient(-45deg, #23024d, #beaeb1, #d7856e, #8e5b70);
-    background-size: 400% 400%;
-    animation: gradient 15s ease infinite;
-    height: 100vh;
     color: #353839;
     font-family: "Roboto", sans-serif;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(-45deg, #D3D3D3, #E5E4E2, #F5F5F5, #F8F8F8);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+	height: 100vh;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+
+#wrap-around {
+    position: relative;
+    height: 100%;
+    width: 100%;
 }
 
 footer {
@@ -33,23 +56,23 @@ a {
     color: #353839;
     border: 1px solid #353839;
     padding: 3px;
-    font-size: 0.7vw;
+    font-size: 15px;
 }
 
-@keyframes gradient {
-    0% {
-        background-position: 0% 50%;
-    }
-    50% {
-        background-position: 100% 50%;
-    }
-    100% {
-        background-position: 0% 50%;
-    }
+header {
+    display: flex;
+    margin: auto;
+    width: 70%;
+    justify-content: center;
 }
 
 h1 {
-    margin-top: 60px;
+    margin-top: 40px;
+    font-size: 2em;
+}
+
+#bunny {
+height: 100px;
 }
 
 input,
@@ -65,31 +88,46 @@ button {
     border: 1px solid #353839;
 }
 
-table select,
-table input {
-    width: 10.5vw;
+#reset {
+    padding: 5px;
 }
+
+
 
 #form-right,
 #result-left {
     padding-top: 20px;
-    line-height: 5.5vh;
-    width: 33.3%;
     background: rgba(255, 255, 255, 0.2);
     border: 0.2vw solid white;
-    border-radius: 40px;
+    border-radius: 20px;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    border: 1px solid black;
+    margin-top: 10px;
 }
 
-#result-left {
-    margin-left: 50px;
+#form-right {
+    line-height: 4vh;
 }
+
+
 
 #criarNota {
     margin-left: 20px;
+    margin-top: 40px;
 }
 
-#reset {
-    margin-top: 5px;
+a {
+    background-color: #424242;
+    color: #f3f3f3;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+    font-weight: bold;
+    padding: 5px;
+    width: 100px;
 }
 
 .content-container {
@@ -108,111 +146,82 @@ table input {
     display: none;
 }
 
-#copy-button {
-    margin-bottom: 10px;
-}
-
-.botoes {
-    margin-top: 5vh;
-}
-
 #content {
     background: transparent;
     border: none;
     margin-top: 10px;
 }
 
+#result-left,
+#form-right {
+    height: 30vh;
+}
+
 textarea {
     resize: none;
-    width: 85%;
-    color: #353839;
-    background: transparent;
+    height: auto;
+    text-align: center;
+}
+
+.result-buttons {
+    width: 50%;
+    display: flex;
+    justify-content: space-around;
+    margin: auto;
+    margin-bottom: 5px;
+}
+
+button {
+    background-color: #424242;
+    color: #f3f3f3;
+    border-radius: 5px;
+    cursor: pointer;
     border: none;
+    font-weight: bold;
+    padding: 5px;
+    width: 100px;
 }
 
-textarea:focus {
-    outline: none;
-}
-
-@media (max-width: 2000px) {
+@media screen and (min-width: 1000px) {
     #wrap-around {
         display: flex;
         justify-content: center;
         margin-top: 50px;
     }
 
-    textarea {
-        height: 25em;
-    }
-}
-
-@media (max-width: 1200px) {
-    body {
-        font-size: 3.5vh;
+    #result-left,
+    #form-right {
+        height: 40vh;
+        margin-left: 5px;
+        margin-right: 5px;
     }
 
-    h1 {
+    #content {
+        background: transparent;
+        border: none;
         margin-top: 10px;
-        font-size: 7vh;
-    }
-
-    table input,
-    table select {
-        width: 18vw;
     }
 
     textarea {
-        font-size: 3vw;
+        width: 50vw;
+        margin-top: 5px;
+        margin-left: 5px;
     }
 
-    .botoes {
+    form {
         margin-top: 20px;
     }
 }
 
-/* @media (max-width: 960px) {
+@media screen and (max-width: 1000px) {
     body {
-        font-size: 3vh;
+        zoom: 0.8;
     }
-
-    label {
-        font-size: 3vh;
-    }
-
-    #wrap-around {
-        display: flex;
-        flex-direction: column;
-    }
-
-    #form-right,
-    #result-left {
-        width: 100%;
-    }
-
-    textarea {
-        height: 15em;
-    }
-} */
-
-@media (max-height: 500px) {
-    body {
-        overflow: scroll;
-        font-size: 1em;
-    }
-    #wrap-around {
-        display: flex;
-        justify-content: center;
-        margin-top: 50px;
-    }
-
-    #form-right,
-    #result-left {
-        width: 33.3%;
-    }
-
-    textarea {
-        height: 15em;
-        font-size: 1em;
-        text-align: center;
-    }
-}
+   #form-right, #result-left {
+    height: 40vh;
+width: 50%;
+margin: auto;
+margin-top: 10px;
+   }
+  }
+  
